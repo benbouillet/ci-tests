@@ -1,0 +1,13 @@
+name: ci-test
+on: [push]
+jobs:
+  test-env-vars:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: echo Local repo URL : $(git config --get remote.origin.url)
+      - run: echo GitHub Actions repo URL  : $GITHUB_REPOSITORY
+      - run: echo Branc name : $GITHUB_REF_NAME
+      - run: commit SHA : $GITHUB_SHA
+      - run: commit short SHA : ${GITHUB_SHA::7}
+      - run: PR number : ${{ github.event.number }}
