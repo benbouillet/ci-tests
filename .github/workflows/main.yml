@@ -6,8 +6,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: show env variables
-	      run: |
-	        echo Local repo URL : $(git config --get remote.origin.url)
+        run: |
+	  echo Local repo URL : $(git config --get remote.origin.url)
           echo GitHub Actions repo URL  : $GITHUB_REPOSITORY
           echo Branc name : $GITHUB_REF_NAME
           echo commit SHA : $GITHUB_SHA
