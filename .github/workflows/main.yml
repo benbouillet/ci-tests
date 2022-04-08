@@ -1,5 +1,5 @@
 name: ci-test
-on: [pr]
+on: [pull_request]
 jobs:
   test-env-vars:
     runs-on: ubuntu-latest
