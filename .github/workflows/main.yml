@@ -15,3 +15,4 @@ jobs:
             echo commit short SHA : ${GITHUB_SHA::7}
             echo PR number : ${{ github.event.number }}
             echo repository name : ${{ github.event.repository.name }}
+            echo owner/org : $GITHUB_ACTOR
